@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "我们如何实现GitOps.md",
+                "file": "我们是如何实现GitOps.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "我们如何实现GitOps.md",
+                "file": "我们是如何实现GitOps.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "我们如何实现GitOps.md",
+                "file": "我们是如何实现GitOps.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "我们如何实现GitOps.md"
+                "file": "我们是如何实现GitOps.md"
               }
             }
           },
@@ -156,7 +156,7 @@
   },
   "active": "56aed6326c48002e",
   "lastOpenFiles": [
-    "我们如何实现GitOps.md",
+    "我们是如何实现GitOps.md",
     "未命名 1.md"
   ]
 }
