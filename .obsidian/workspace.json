@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "f4b26d100e302de2",
+        "id": "7558fd7f33f62155",
         "type": "tabs",
         "children": [
           {
-            "id": "908900fb512ac978",
+            "id": "d131411ced52d96a",
             "type": "leaf",
             "state": {
               "type": "diff-view",
@@ -149,7 +149,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "908900fb512ac978",
+  "active": "d131411ced52d96a",
   "lastOpenFiles": [
     "我们如何实现GitOps.md",
     "未命名 1.md"
