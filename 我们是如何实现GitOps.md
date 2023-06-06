@@ -23,7 +23,14 @@
 经过上面的实践，我们已经见识到了 GitOps 的强大。所以我们将 GitOps 应用到了 Horizon 中。Horizon 中的 GitOps 逻辑与上述逻辑略有不同，它底层使用 Argo CD 作为 GitOps 引擎。
 GitOps 引擎会监听 GitOps 仓库和Kubernetes资源。Horizon 会为其中的每个应用创建对应的 GitOps 仓库，GitOps 仓库有两个 branch，一个为 master 分支，通过 Argo CD与 Kubernetes 中的相关资源对应；另一个为 gitops 分支，gitops 分支中包含了用户修改之后还未生效的配置。
 
-当用户发布或者构建发布时，Horizon 会将 gitops 分支合并到 master 分支中。因为 Argo CD
+当用户发布或者构建发布时，Horizon 会将 gitops 分支合并到 master 分支中。因为 Argo CD 监听了 GitOps 仓库中的 master 分支，所以 Argo CD 会感知到变化。通过和 Kubernetes 中的相关资源比对，如果不一致则触发一次同步，将 GitOps 仓库中的配置，应用到 Kubernetes 中。完成一次部署。
 
+![[Pasted image 20230606201754.jpg]]
 
+Horizon在合并分支时，会将相关参数，比如操作人、时间、修改等信息记录到 description 中，方便审阅。
+Horizon中的回滚，是将对应的修改再合并到 master 分支。
+
+## Istio
+
+我们在与外部用户的交流中发现，外部用户有很多使用 istio 与 deployment 实现流量灰度。这样需要实现一个 svc 对应多个deployment
 ![[6847c91db7e58bfa4887ed27d8abffb3.png]]
