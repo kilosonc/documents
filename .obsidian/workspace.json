@@ -1,0 +1,163 @@
+{
+  "main": {
+    "id": "2e3a7f0749201416",
+    "type": "split",
+    "children": [
+      {
+        "id": "ee263e1b89531657",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ceaa37cf8f39d4c1",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "f5ec71a9550b09cc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "我们如何实现GitOps.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "738b3ffe4c050805",
+    "type": "split",
+    "children": [
+      {
+        "id": "c78cbbc2e8476e19",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d7942dcd813a3de8",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "a52e809696433bb4",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "8d4398bde2b4cb87",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "93176008792573be",
+    "type": "split",
+    "children": [
+      {
+        "id": "2ddff8dd1174aa25",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "20c064ac66b2cfa7",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "我们如何实现GitOps.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "4594d27bfc39780e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "我们如何实现GitOps.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "39a95fc25fd56556",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "d4b59edcdd0d19be",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "我们如何实现GitOps.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "d7942dcd813a3de8",
+  "lastOpenFiles": [
+    "未命名 1.md",
+    "我们如何实现GitOps.md"
+  ]
+}
