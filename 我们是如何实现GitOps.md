@@ -30,7 +30,18 @@ GitOps 引擎会监听 GitOps 仓库和Kubernetes资源。Horizon 会为其中�
 Horizon在合并分支时，会将相关参数，比如操作人、时间、修改等信息记录到 description 中，方便审阅。
 Horizon中的回滚，是将对应的修改再合并到 master 分支。
 
-## Istio
+## GitOps 的优势
 
-我们在与外部用户的交流中发现，外部用户有很多使用 istio 与 deployment 实现流量灰度。这样需要实现一个 svc 对应多个deployment
+经过以上两个例子，你可以感受到 GitOps 有许多优势：
+
+1. 增强了开发团队的协作能力：GitOps可以帮助开发团队更好地协作，将应用程序的配置和部署流程存储在Git仓库中，使得整个团队可以更加透明和高效地工作。
+2. 提高了应用程序的可靠性和可用性：GitOps使用自动化部署和测试来提高应用程序的可靠性和可用性，减少了手动操作的错误和风险。
+3. 降低了操作失误的风险：GitOps的自动化部署和测试可以降低操作失误的风险，并提高整个团队的运维能力。
+4. 提高了部署速度和效率：GitOps可以自动部署应用程序，并快速地检测和解决问题，从而提高整个团队的部署速度和效率。
+
+现在 Horizon 已经在 Github 上开源，如果你对 GitOps 或者 Horizon 感兴趣，可以加入我们的[微信群](https://github.com/horizoncd/horizon#contact-us)与我们进一步交流
+
+## FAQ
+
+我们在与外部用户的交流中发现，外部用户有很多使用 istio 与 deployment 实现流量灰度。这样需要实现一个 svc 对应多个 deployment 的场景。
 ![[6847c91db7e58bfa4887ed27d8abffb3.png]]
