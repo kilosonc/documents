@@ -4,17 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "7558fd7f33f62155",
+        "id": "18046676d9dad5aa",
         "type": "tabs",
         "children": [
           {
-            "id": "d131411ced52d96a",
+            "id": "56aed6326c48002e",
             "type": "leaf",
             "state": {
-              "type": "diff-view",
+              "type": "markdown",
               "state": {
-                "file": ".obsidian/workspace.json",
-                "staged": false
+                "file": "我们如何实现GitOps.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -84,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "我们如何实现GitOps.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "我们如何实现GitOps.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -121,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "我们如何实现GitOps.md"
+              }
             }
           },
           {
@@ -149,7 +154,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "d131411ced52d96a",
+  "active": "56aed6326c48002e",
   "lastOpenFiles": [
     "我们如何实现GitOps.md",
     "未命名 1.md"
