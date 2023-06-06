@@ -4,6 +4,8 @@
 
 为了解决以上提到的问题，云原生团队内部管控组件部署，实现了一套基于 Gitlab CI 的 GitOps 部署规范流程。云原生团队内部，每个线上运行的组件都有一个对应的代码仓库和部署仓库。开发者将修改推到代码仓库后，通过review合入主分支，打出对应的镜像。只需要修改 GitOps 部署仓库，就能将修改部署到线上。
 
-首先开发者需要 Fork 一份部署仓库的代码，部署仓库一般为 [Helm](https://helm.sh/) Chart。
+首先开发者需要 Fork 一份部署仓库的代码，部署仓库一般为一个 [Helm](https://helm.sh/) Chart。该仓库中只需改动values.yaml 文件，一般情况下，修改该文件即可满足开发者的需求。而 templates 文件则打包放在 Harbor 中。配置仓库通过的 Chart.yaml 的 dependency 字段引用该 templates。因为我们有多个环境需要部署相同的组件，将 templates 抽出来，可以将统一的配置放于 templates 中，而各自的代码仓库，可以放置不同的配置。兼顾统一与灵活。  
+
+开发者在修改配置仓库
 
 ![[Pasted image 20230606193220.jpg]]
