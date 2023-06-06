@@ -80,23 +80,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "20c064ac66b2cfa7",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "我们是如何实现GitOps.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
             "id": "4594d27bfc39780e",
             "type": "leaf",
             "state": {
@@ -130,7 +113,24 @@
             }
           },
           {
-            "id": "82cc4c5b27d7514c",
+            "id": "20c064ac66b2cfa7",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "我们是如何实现GitOps.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "df7f0f2d12897885",
             "type": "leaf",
             "state": {
               "type": "git-view",
@@ -154,8 +154,9 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "69ce0d1298de202e",
+  "active": "df7f0f2d12897885",
   "lastOpenFiles": [
+    "6847c91db7e58bfa4887ed27d8abffb3.png",
     "().md",
     "我们是如何实现GitOps.md",
     "Pasted image 20230606193220.jpg",
