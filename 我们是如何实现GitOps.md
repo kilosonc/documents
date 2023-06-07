@@ -48,5 +48,6 @@ Horizon中的回滚，是将对应的修改再合并到 master 分支。
 
 ## FAQ
 
-我们在与外部用户的交流中发现，外部用户有很多使用 istio 与 deployment 实现流量灰度。这样需要实现一个 svc 对应多个 deployment 的场景。
+我们在与外部用户的交流中发现，许多用户使用 istio 与 deployment 实现流量灰度。如下图所示，流量通过 virtual services 中的规则找到对应的 pods。
+在下图所示的情况下，所有的 deployment 都对应同一个 service。如果将 deployment 和 service 放在同一个部署仓库中，因为 istio 的金丝雀发布要求创建一个新版本的 deployment，所以会同时创建新的 service
 ![[6847c91db7e58bfa4887ed27d8abffb3.png]]
