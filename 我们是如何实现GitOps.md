@@ -49,7 +49,7 @@ Horizon在合并分支时，会将相关参数，比如操作人、时间、修�
 #### GitOps 仓库
 
 Horizon 基于 Helm 部署应用，所以 GitOps 仓库约等于 Helm Chart + JsonSchema。Horizon 使用 JsonSchema 渲染表单，获取用户输入；使用用户输入值与 Helm Chart 一起渲染 Manifest，部署应用。
-下图为 GitOps 仓库结构，`Chart.yaml` 文件是 Helm Chart 的标准，其中引用了真正的部署 templates
+下图为 GitOps 仓库结构，`Chart.yaml` 文件是 Helm Chart 的标准，其中引用了真正的部署 Helm Chart，我们称之为模板
 ```yaml
 apiVersion: v2  
 name: demo  
@@ -79,7 +79,39 @@ deployment:
     commitID: 28992d8f35a6ef38d59181080b3728df9540d8d6
     url: https://github.com/horizoncd/springboot-source-demo.git
 ```
+`sre.yaml` 是提供给 SRE 修改的，在一些特殊情况下，SRE 可以通过该文件重载 `values.yaml` 中的数据
+```yaml
+deployment: 
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: cloudnative/demo
+            operator: In
+            values:
+            - "true"
+```
+system目录下的文件记录了部署的元信息， `env.yaml` 记录了部署环境相关的信息
+```yaml
+deployment:
+  env:
+    environment: local
+    region: local
+    namespace: local-1
+    baseRegistry: horizon-harbor-core.horizon.svc.cluster.local
+    ingressDomain: cloudnative.com
+```
+`horizon.yaml` 记录了需要该 Gitops 仓库与 Horizon 的关联信息
 
+| 参数 |  |
+| ---- | ---- |
+| .Values.horizon.application | Application name |
+| .Values.horizon.clusterID | Cluster id |
+| .Values.horizon.cluster | Cluster name |
+| .Values.horizon.template.name | Template name |
+| .Values.horizon.template.release | Domain of ingress |
+| .Values.horizon.priority | Priority of this cluster. you can use it for oversale or preemption. |
 ![[Pasted image 20230607175545.png]]
 
 ## Pull还是Push
