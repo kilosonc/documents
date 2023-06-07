@@ -7,7 +7,7 @@
  
 ## 什么是GitOps
 
-GitOps是Weaveworks公司于2017年首创的一种进行Kubernetes集群管理和应用交付的方式。GitOps通过使用Git作为声明性基础设施和应用程序的单一事实来源进行工作。 GitOps的核心是将应用的声明性基础架构描述、应用源码与自动化流程存放在Git Repository中，将Git作为交付流水线的核心。GitOps会Diff Repository中声明信息与Kubernetes集群中实际运行的内容之间的差异，其实现的GitOps Kubernetes Operator会根据情况进行自动更新或回滚集群；通过将Git作为交付流水线的核心，开发人员可以使用push、pull request等Git操作，以加速和简化Kubernetes集群应用程序的部署和操作任务。
+GitOps 是一种 DevOps 方法论，通过使用 Git 作为单一的事实来源，将应用程序的生命周期管理自动化。GitOps 可以实现基础设施即代码、自动化部署、自动化测试和自动化监控，从而提高软件开发的速度和质量。GitOps 的核心理念是将所有的代码、配置和基础设施的变更都提交到 Git 仓库中，通过工具将这些变更应用到生产环境中。这种方法可以减少手动干预和错误，并提高开发团队的可见性和可控性。
 
 ## GitOps 的优势
 
@@ -54,13 +54,11 @@ Horizon在合并分支时，会将相关参数，比如操作人、时间、修�
 那我们在实际中应该选择哪种方式呢？
 
 采用 Push 风格会有如下特点：
-
 - 简单灵活。这种部署方式已经被众多知名的 CI/CD 工具所采用，例如 Jenkins CI，AWS Code系列。易于同其他的脚本或工具集成。
 - 需要权限。需要获取部署环境的凭证，确保自己 CD 流水线的权限最小化。防止被攻击时，暴露太高的权限。
 - 无法感知部署状态。如果开发者手动修改 Kubernetes 资源，造成实际资源与 Git 仓库配置存在差异，Push 风格的 Gitops 无法感知。
 
-采用 Pull 部署风格会有如下特点，
-
+采用 Pull 部署风格会有如下特点：
 - 安全。因为 GitOps 代理运行在 Kubernetes 集群中，因此仅需要最小的权限用于部署。
 - 一致性。Pull 风格的 GitOps 会监听 Kubernetes 资源和 Git 仓库，Kubernetes 资源发生变更时与 Git 仓库进行比对，保证所有的修改都以 Git 仓库为准。
 
@@ -76,9 +74,10 @@ Horizon在合并分支时，会将相关参数，比如操作人、时间、修�
 3. 密码管理：Git 仓库中数据都是明文显示，并且 Git 仓库会记住所有的历史修改，所以放在 Git 仓库中的明文信息应该加密。虽然社区里面开发了一些类似于 [git-secret](https://github.com/sobolevn/git-secret) 的工具，但使用起来还是不太方便。
 4. 回滚没有
 
-所以 GitOps 并不是银弹，需要开发者基于自身情况，选择最适合自己的方案。
+所以 GitOps 并不是银弹，开发者需要基于自身情况判断，选择最适合自己的方案。
 
-现在 Horizon 已经在 Github 上开源，如果你对 GitOps 或者 Horizon 感兴趣，可以加入我们的[微信群](https://github.com/horizoncd/horizon#contact-us)与我们进一步交流
+## 结语
+GitOps 作为一种 DevOps 方法，还在快速发展中。我们也会持续关注、尝试 GitOps 领域的最新技术。如果你也想使用 GitOps 或者对其感兴趣，可以[加入我们](https://github.com/horizoncd/horizon#contact-us)，和我们一起讨论。
 
 ## FAQ
 
