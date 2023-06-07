@@ -58,6 +58,6 @@ Horizon中的回滚，是将对应的修改再合并到 master 分支。
 
 ### 单“Deployment”
 deployment 的升级过程中需要创建新的 deployment，如果我们升级时不需要创建新的 deployment，也可以解决这个问题。这里我们引入 argo rollout，argo rollouts是一个Kubernetes控制器和一套CRD，为Kubernetes提供了先进的部署能力，如蓝绿、金丝雀、金丝雀分析、实验和渐进式交付功能。argo rollout的升级过程中，只会有一个 rollout，所以我们可以保证只有一个 service 存在。argo rollout 对 istio 流量灰度有完整的[支持](https://argo-rollouts.readthedocs.io/en/stable/features/traffic-management/istio/)。
-argo Rollout 相当成熟，已经在 Horizon 内部进行了大规模实践，我们推荐使用 
+argo Rollout 相当成熟，已经在 Horizon 内部进行了大规模实践，我们推荐使用。
 
 
