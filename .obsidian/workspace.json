@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "cceca06245ee7275",
+        "id": "4d446ba18d7d994f",
         "type": "tabs",
         "children": [
           {
-            "id": "24cadd7c793cfc5f",
+            "id": "996b55c01fc4df2d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "我们是如何实现GitOps.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -61,7 +65,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -81,6 +86,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "我们是如何实现GitOps.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -102,7 +108,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "我们是如何实现GitOps.md"
+              }
             }
           },
           {
@@ -111,6 +119,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "我们是如何实现GitOps.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -130,7 +139,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -146,10 +155,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "24cadd7c793cfc5f",
+  "active": "996b55c01fc4df2d",
   "lastOpenFiles": [
-    "2023-06-07.md",
     "我们是如何实现GitOps.md",
+    "2023-06-07.md",
     "Pasted image 20230606201754.jpg",
     "6847c91db7e58bfa4887ed27d8abffb3.png",
     "().md",
