@@ -18,7 +18,7 @@
 
 以上流程，我们通过引入测试流水线和 Reviewer 降低了出错的概率，通过重新运行部署流水线完成了快速回滚，通过 commit 记录每次部署的操作者，通过自动化部署减少了人工介入，解决了绝大部分传统部署过程中的问题。
 
-### Horizon 应用部署
+## Horizon 应用部署
 
 经过上面的实践，我们已经见识到了 GitOps 的强大。所以我们将 GitOps 应用到了 Horizon 中。Horizon 中的 GitOps 逻辑与上述逻辑略有不同，它底层使用 Argo CD 作为 GitOps 引擎。
 GitOps 引擎会监听 GitOps 仓库和Kubernetes资源。Horizon 会为其中的每个应用创建对应的 GitOps 仓库，GitOps 仓库有两个 branch，一个为 master 分支，通过 Argo CD与 Kubernetes 中的相关资源对应；另一个为 gitops 分支，gitops 分支中包含了用户修改之后还未生效的配置。
