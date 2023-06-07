@@ -48,6 +48,38 @@ GitOps 引擎会监听 GitOps 仓库和Kubernetes资源。Horizon 会为其中�
 Horizon在合并分支时，会将相关参数，比如操作人、时间、修改等信息记录到 description 中，方便审阅。
 #### GitOps 仓库
 
+Horizon 基于 Helm 部署应用，所以 GitOps 仓库约等于 Helm Chart + JsonSchema。Horizon 使用 JsonSchema 渲染表单，获取用户输入；使用用户输入值与 Helm Chart 一起渲染 Manifest，部署应用。
+下图为 GitOps 仓库结构，`Chart.yaml` 文件是 Helm Chart 的标准，其中引用了真正的部署 templates
+```yaml
+apiVersion: v2  
+name: demo  
+version: 1.0.0  
+dependencies:  
+- name: deployment  
+version: v0.0.1-ec06d596  
+repository: https://horizon-harbor-core.horizon.svc.cluster.local/chartrepo/horizon-template
+```
+`application.yaml` 包含了用户通过 JsonSchemaForm 表单填写的数据
+```yaml
+deployment:
+  app:
+    envs:
+    - name: test
+      value: test
+    spec:
+      replicas: 1
+      resource: x-small
+```
+`pipeline-output.yaml` 包含了 CI 阶段的输出，最主要的是其中包含了构建出的镜像名
+```yaml
+deployment:
+  image: library/demo:v1
+  git:
+    branch: master
+    commitID: 28992d8f35a6ef38d59181080b3728df9540d8d6
+    url: https://github.com/horizoncd/springboot-source-demo.git
+```
+
 ![[Pasted image 20230607175545.png]]
 
 ## Pull还是Push
