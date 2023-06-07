@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "4d446ba18d7d994f",
+        "id": "f59430e6790cf7b4",
         "type": "tabs",
         "children": [
           {
-            "id": "996b55c01fc4df2d",
+            "id": "cf3dfabb89fc6963",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -139,7 +139,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -155,7 +155,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "d4b59edcdd0d19be",
+  "active": "cf3dfabb89fc6963",
   "lastOpenFiles": [
     "我们是如何实现GitOps.md",
     "2023-06-07.md",
